@@ -1133,8 +1133,11 @@ var nombre = pickName(nameObj);
 
 //HTML HOOK
 function getAll() {
+    
     document.getElementById("randomResult").innerHTML = printRandom();
+
 }
+
 
 //FUNCTIONS 
 function randomNum(min, max) {
@@ -1271,6 +1274,7 @@ function printRandom() {
     <em>Class:</em>   <b>${Class}</b> <br><br>
     <em>Background:</em>   <b>${bg}</b> <br><br>
     <em>Personality Traits:</em>   <b>${traitPos}, ${traitNeu}, ${traitNeg}</b> <br><br>
-    <em>Ability Scores:</em>   <b>${stats}</b>
+    <em>Ability Scores:</em>   <b>${stats}</b> <br>
     `;
 }
+
