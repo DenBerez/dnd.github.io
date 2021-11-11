@@ -162,7 +162,7 @@ let traitObj = {
         'Providential',
         'Prudent',
         'Punctual',
-        'Pruposeful',
+        'Purposeful',
         'Rational',
         'Realistic',
         'Reflective',
@@ -1133,7 +1133,9 @@ var nombre = pickName(nameObj);
 
 //HTML HOOK
 function getAll() {
+    
     document.getElementById("randomResult").innerHTML = printRandom();
+
 }
 
 //FUNCTIONS 
@@ -1265,12 +1267,15 @@ function pickName(nameObj) {
 function printRandom() {
     return `
     <em>Name:</em>   <b>${nombre}</b> <br><br>
-    <em>Subrace:</em>   <b>${subRace}</b> <br>
-    <em>Race:</em>   <b>${race}</b> <br><br>
-    <em>Subclass:</em>   <b>${subClass}</b> <br>
-    <em>Class:</em>   <b>${Class}</b> <br><br>
-    <em>Background:</em>   <b>${bg}</b> <br><br>
-    <em>Personality Traits:</em>   <b>${traitPos}, ${traitNeu}, ${traitNeg}</b> <br><br>
-    <em>Ability Scores:</em>   <b>${stats}</b>
+    <em>Subrace:</em>   <b><a href='https://www.google.com/search?q=dnd+5e+${subRace}+subrace' target='_blank'>${subRace}</a></b> <br>
+    <em>Race:</em>   <b><a href='https://www.google.com/search?q=dnd+5e+${race}' target='_blank'>${race}</a></b> <br><br>
+    <em>Subclass:</em>   <b><a href='https://www.google.com/search?q=dnd+5e+${subClass}+${Class}' target='_blank'>${subClass}</a></b> <br>
+    <em>Class:</em>   <b><a href='https://www.google.com/search?q=dnd+5e+${Class}' target='_blank'>${Class}</a></b> <br><br>
+    <em>Background:</em>   <b><a href='https://www.google.com/search?q=dnd+5e+${bg}+background' target='_blank'>${bg}</a></b> <br><br>
+    <em>Personality Traits:</em>   <b><a href='https://www.google.com/search?q=define+${traitPos}' target='_blank'> ${traitPos}</a>,
+     <a href='https://www.google.com/search?q=define+${traitNeu}' target='_blank'>${traitNeu}</a>,
+     <a href='https://www.google.com/search?q=define+${traitNeg}' target='_blank'> ${traitNeg}</a></b> <br><br>
+    <em>Raw Ability Scores (4d6-Lowest):</em>   <b>${stats}</b> <br>
     `;
 }
+
